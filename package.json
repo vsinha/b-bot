@@ -3,11 +3,13 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "start": "./node_modules/.bin/hubot",
     "watch": "node ./node_modules/typescript/bin/tsc -p . -w",
     "build": "node ./node_modules/typescript/bin/tsc -p .",
     "lint": "node ./node_modules/tslint/bin/tslint --project ./tslint.json"
   },
   "dependencies": {
+    "coffee": "^4.1.0",
     "hubot": "^2.11.4",
     "hubot-reload-scripts": "^0.1.4",
     "hubot-rocketchat": "^1.0.12",

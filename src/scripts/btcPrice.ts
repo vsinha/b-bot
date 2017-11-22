@@ -8,9 +8,6 @@ function commas(x: number | string): string {
 
 class BTCPrice {
 
-    constructor(private messageSender: ms.ISendMessages) { }
-
-
     public registerListener(robot: any) {
         return robot.hear(/btc|bitcoin|batcoin/i, async (res: any) => {
             try {
@@ -35,4 +32,4 @@ class BTCPrice {
     }
 }
 
-export = new BTCPrice(new ms.MessageSender()).registerListener;
+export = new BTCPrice().registerListener;

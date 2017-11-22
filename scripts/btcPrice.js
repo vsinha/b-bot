@@ -34,15 +34,13 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-var ms = require("../helpers/messageSender");
 var request = require("request-promise");
 var endpoint = "https://api.coindesk.com/v1/bpi/currentprice.json";
 function commas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 var BTCPrice = /** @class */ (function () {
-    function BTCPrice(messageSender) {
-        this.messageSender = messageSender;
+    function BTCPrice() {
     }
     BTCPrice.prototype.registerListener = function (robot) {
         var _this = this;
@@ -54,7 +52,7 @@ var BTCPrice = /** @class */ (function () {
                         _a.trys.push([0, 2, , 3]);
                         return [4 /*yield*/, request({
                                 uri: endpoint,
-                                json: true
+                                json: true,
                             })];
                     case 1:
                         data = _a.sent();
@@ -76,5 +74,5 @@ var BTCPrice = /** @class */ (function () {
     };
     return BTCPrice;
 }());
-module.exports = new BTCPrice(new ms.MessageSender()).registerListener;
+module.exports = new BTCPrice().registerListener;
 //# sourceMappingURL=btcPrice.js.map

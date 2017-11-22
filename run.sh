@@ -1,3 +1,2 @@
 #!/bin/sh
-gulp
-sh bin/hubot
+./node_modules/.bin/hubot -a rocketchat
