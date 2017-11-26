@@ -1,35 +1,31 @@
-import * as request from "request-promise";
+// import * as request from "request-promise";
+// import { commas } from "../util/formatting";
 
-const endpoint = "https://api.coindesk.com/v1/bpi/currentprice.json";
+// const endpoint = "https://api.coindesk.com/v1/bpi/currentprice.json";
 
-function commas(x: number | string): string {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
+// class BTCPrice {
+//     public registerListener(robot: any) {
+//         return robot.hear(/btc|bitcoin|batcoin/i, async (res: any) => {
+//             try {
+//                 const data = await request({
+//                     uri: endpoint,
+//                     json: true,
+//                 });
 
-class BTCPrice {
+//                 const priceUSD: number = data.bpi.USD.rate_float;
 
-    public registerListener(robot: any) {
-        return robot.hear(/btc|bitcoin|batcoin/i, async (res: any) => {
-            try {
-                const data = await request({
-                    uri: endpoint,
-                    json: true,
-                });
+//                 if (!priceUSD) {
+//                     throw new Error("No price in response from " + endpoint);
+//                 }
 
-                const priceUSD: number = data.bpi.USD.rate_float;
+//                 const message = `1 BTC = ${commas(priceUSD.toFixed(2))} USD`;
 
-                if (!priceUSD) {
-                    throw new Error("No price in response from " + endpoint);
-                }
+//                 res.send(message);
+//             } catch (err) {
+//                 console.error(err);
+//             }
+//         });
+//     }
+// }
 
-                const message = `1 BTC = ${commas(priceUSD.toFixed(2))} USD`;
-
-                res.send(message);
-            } catch (err) {
-                console.error(err);
-            }
-        });
-    }
-}
-
-export = new BTCPrice().registerListener;
+// export = new BTCPrice().registerListener;
