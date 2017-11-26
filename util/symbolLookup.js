@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 function cryptoRegexBuilder() {
-    return new RegExp(Object.keys(exports.table).join("|"), "i");
+    return new RegExp("\\b" + Object.keys(exports.table).join("\\b|\\b") + "\\b", "i");
 }
 exports.cryptoRegexBuilder = cryptoRegexBuilder;
 exports.table = {
@@ -207,6 +207,6 @@ exports.table = {
     "xas": "asch",
     "loopring": "loopring",
     "lrc": "loopring",
-    "kin": "kin"
+    "kin": "kin",
 };
 //# sourceMappingURL=symbolLookup.js.map

@@ -1,6 +1,6 @@
 
 export function cryptoRegexBuilder(): RegExp {
-    return new RegExp(Object.keys(table).join("|"), "i");
+    return new RegExp("\\b" + Object.keys(table).join("\\b|\\b") + "\\b", "i");
 }
 
 export const table = {
@@ -206,5 +206,5 @@ export const table = {
     "xas": "asch",
     "loopring": "loopring",
     "lrc": "loopring",
-    "kin": "kin"
+    "kin": "kin",
 };
