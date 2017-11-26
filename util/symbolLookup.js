@@ -1,7 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 function cryptoRegexBuilder() {
-    return new RegExp("\\b" + Object.keys(exports.table).join("\\b|\\b") + "\\b", "i");
+    var str = "^(" + Object.keys(exports.table).join("|").replace(/\-/g, "\\-") + ")$";
+    console.log(str);
+    return new RegExp(str, "i");
 }
 exports.cryptoRegexBuilder = cryptoRegexBuilder;
 exports.table = {

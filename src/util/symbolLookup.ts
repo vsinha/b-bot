@@ -1,6 +1,8 @@
 
 export function cryptoRegexBuilder(): RegExp {
-    return new RegExp("\\b" + Object.keys(table).join("\\b|\\b") + "\\b", "i");
+    const str = "^(" + Object.keys(table).join("|").replace(/\-/g, "\\-") + ")$";
+    console.log(str);
+    return new RegExp(str, "i");
 }
 
 export const table = {
