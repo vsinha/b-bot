@@ -6,11 +6,11 @@ class Over9000 {
         return robot.hear(/[\d.,]+/g, (res: any) => {
             const num: string = res.match[0].split(',').join('').split('.')[0];
             if (parseInt(num, 10) < 9000) {
-                return
+                return;
             }
             const prob = Math.random();
             if (prob < 0.9) {
-                return
+                return;
             }
             const message = Over9000.baseMessage;
             res.send(message);
