@@ -6,7 +6,7 @@ class Over9000 {
         return robot.hear(/[\d.,]+/g, async (res: any) => {
             const num: string = res.match[0].split(',').join('').split('.')[0];
 
-            if (parseInt(num) > 9000) {
+            if (parseInt(num, 10) > 9000) {
                 const message = Over9000.baseMessage;
                 res.send(message);
             }

@@ -1,44 +1,45 @@
-#Hubot+Typescript
+### Bot Bot Bot Chat Bot
 
-###Why? 
-Because TypeScript is the next big thing. Also because hubot scripts are powerful and fun. Why NOT is the better question?
+A [hubot](https://hubot.github.com/)-based chat bot written in typescript, configured with the hubot-rocketchat adapter.
 
-###Hubot is written in coffeescript... what class of witchcraft is at work here??
-Yes, Hubot is written in coffeescript. And, normally, hubot scripts are also written in coffeescript. BUT, you can also include normal javascript files (*.js) at hubot scripts. TypeScript compiles down to javascript, so there's no reason why we can't write hubot scripts in TypeScript! 
+Based on the typescript [hubot-example](https://github.com/AcklenAvenue/hubot-example) project because typescript is thebomb.com
 
-##Getting started:
+## Instructions
 
-###You should have a few things installed globally on your dev machine.
-- Node/npm https://nodejs.org/download/
-- Hubot `npm install -g coffee-script hubot`
-- Grunt `npm install -g grunt-cli`
+- Source lives in the `src/` directory (ie scripts are in `src/scripts/*.ts`.
+- The typescript source is compiled to javascript which lives at project root (ie `scripts/*.js`). Hubot is booted from the project root.
+- *Do not make changes to the `.js` files!* They will be overwritten at build time.
 
-###You need to install all the project-specific node packages:
-- Clone this repo and navigate to the project folder
-- `npm install`
+### To run locally
 
-###Test the hubot
-- `run.bat` will run grunt to compile the ts file(s) and then runs `bin/hubot`
-- `sh run.sh` if using OSX or Linux.
-- Try typing `howdy` at the prompt... you should get a response.
+```bash
+# install dependencies
+npm i
 
-###Set up your dev environment:
-- Sublime Plugin - https://github.com/raph-amiard/sublime-typescript
-- Brackets Plugin - https://github.com/fdecampredon/brackets-typescript
-- Visual Studio Extension - https://visualstudiogallery.msdn.microsoft.com/2d42d8dc-e085-45eb-a30b-3f7d50d55304
+# build
+npm run lint
+npm run build
 
-##Get moving:
+# run a local 'chat' session with hubot!
+npm start
+```
 
-###Learn Typescript:
-- Check out the reference guide at http://www.typescriptlang.org/Handbook
-- Try out typescript at http://www.typescriptlang.org/Playground
+### To develop
+```bash
+npm run watch # will automatically rebuild on any source file changes
+npm start
+```
 
-###Learn Hubot:
-- Read about how hubot works at https://hubot.github.com/
-- Look at examples at https://github.com/hubot-scripts
+### To develop with VSCode like a real pro
+```bash
+code ./ # open this puppy up
+```
 
-###Create a hubot script:
-- Create a new file in `/scripts` with extension `.ts`
-- Use the `helloWorld.ts` script as a guide
-- To compile the `.ts` files to javascript, run `grunt` from the command line
-- To compile and run hubot in one command, use `run.bat` in Windows or `sh run.sh` in OSX or Linux. 
+and then from inside VSCode, do  `<cmd+shift+p> Run Task -> npm watch`
+(the linter should run automagically)
+
+## Contributing
+
+Happy to merge PRs! Please remember to build `npm run build` and commit the updated `./scripts/*.js`.
+
+(Running this step will run the compile time checks which make typescript good)

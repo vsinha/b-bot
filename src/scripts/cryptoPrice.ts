@@ -1,6 +1,5 @@
 import * as request from "request-promise";
 import { cryptoRegexBuilder, table as cryptoLookupTable } from "../util/symbolLookup";
-import { commas } from "../util/formatting";
 
 const baseUrl = "https://api.coinmarketcap.com/v1/ticker/";
 
@@ -39,6 +38,7 @@ class CryptoPrice {
 
                 res.send(message);
             } catch (err) {
+                //  tslint:disable-next-line:no-console
                 console.error(err);
             }
         });

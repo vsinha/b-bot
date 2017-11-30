@@ -1,7 +1,7 @@
 
 export function cryptoRegexBuilder(): RegExp {
-    const str = "^(" + Object.keys(table).join("|").replace(/\-/g, "\\-") + ")$";
-    console.log(str);
+    const str = "^(" + Object.keys(table).join("|").replace(/\-/gi, "\\-") + ")$";
+    // console.log(str);
     return new RegExp(str, "i");
 }
 

@@ -3,7 +3,7 @@
 
 class Mean {
     public registerListener(robot: any) {
-        return robot.hear(/^i mean/igm, async (res: any) => {
+        return robot.hear(/^i mean/igm, (res: any) => {
             const prob = Math.random();
             if (prob > 0.95) {
                 res.send("NO");
