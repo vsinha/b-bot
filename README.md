@@ -9,6 +9,7 @@ Based on the typescript [hubot-example](https://github.com/AcklenAvenue/hubot-ex
 - Source lives in the `src/` directory (ie scripts are in `src/scripts/*.ts`.
 - The typescript source is compiled to javascript which lives at project root (ie `scripts/*.js`). Hubot is booted from the project root.
 - *Do not make changes to the `.js` files!* They will be overwritten at build time.
+- This repo automagically gets built into a docker container [here](https://hub.docker.com/r/viosi/bbot)
 
 ### To run locally
 
