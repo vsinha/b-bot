@@ -76,6 +76,7 @@ var CryptoPrice = /** @class */ (function () {
                         return [3 /*break*/, 4];
                     case 3:
                         err_1 = _a.sent();
+                        //  tslint:disable-next-line:no-console
                         console.error(err_1);
                         return [3 /*break*/, 4];
                     case 4: return [2 /*return*/];
