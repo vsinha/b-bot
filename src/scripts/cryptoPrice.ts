@@ -11,9 +11,7 @@ class CryptoPrice {
             const word = res.match[0].trim().toLowerCase();
             const coinName = cryptoLookupTable[word];
 
-            if (!coinName) {
-                return;
-            }
+            if (!coinName) { return; }
 
             const endpoint = baseUrl + coinName;
 
