@@ -8,7 +8,7 @@ class CryptoPrice {
         const re = cryptoRegexBuilder();
 
         return robot.hear(re, async (res: any) => {
-            const word = res.match[0].trim();
+            const word = res.match[0].trim().toLowerCase();
             const coinName = cryptoLookupTable[word];
 
             if (!coinName) {
