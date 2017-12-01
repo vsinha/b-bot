@@ -48,7 +48,7 @@ var CryptoPrice = /** @class */ (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        word = res.match[0].trim();
+                        word = res.match[0].trim().toLowerCase();
                         coinName = symbolLookup_1.table[word];
                         if (!coinName) {
                             return [2 /*return*/];
