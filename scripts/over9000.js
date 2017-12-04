@@ -4,16 +4,15 @@ var Over9000 = /** @class */ (function () {
     }
     Over9000.prototype.registerListener = function (robot) {
         return robot.hear(/[\d.,]+/g, function (res) {
-            var num = res.match[0].split(',').join('').split('.')[0];
-            if (parseInt(num, 10) < 9000) {
-                return;
-            }
             var prob = Math.random();
             if (prob < 0.9) {
                 return;
             }
-            var message = Over9000.baseMessage;
-            res.send(message);
+            var num = res.match[0].split(',').join('').split('.')[0];
+            if (parseInt(num, 10) > 9000) {
+                var message = Over9000.baseMessage;
+                res.send(message);
+            }
         });
     };
     Over9000.baseMessage = "IT'S OVER 9000 https://www.youtube.com/watch?v=SiMHTK15Pik";
