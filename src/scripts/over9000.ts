@@ -12,6 +12,7 @@ class Over9000 {
 
             console.log(`over 9000: ${num}`);
 
+            // only do this sometimes
             const prob = Math.random();
             if (prob < 0.9) {
                 return;
