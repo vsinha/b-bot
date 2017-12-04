@@ -1,15 +1,16 @@
 FROM node:8.9.1
 
+# hubot wants to use global coffee
 RUN npm install -g coffee-script
 
-WORKDIR /opt
-
+# install packages
 ADD package.json /opt
+WORKDIR /opt
 RUN npm install --production
 
-ADD run.sh /opt
+# add the codes
+ADD . /opt
+RUN npm run build
 
-ADD scripts /opt/scripts
-ADD util /opt/util
-
+# ship it
 CMD ["/opt/run.sh"]

@@ -7,8 +7,8 @@ Based on the typescript [hubot-example](https://github.com/AcklenAvenue/hubot-ex
 ## Instructions
 
 - Source lives in the `src/` directory (ie scripts are in `src/scripts/*.ts`.
-- The typescript source is compiled to javascript which lives at project root (ie `scripts/*.js`). Hubot is booted from the project root.
-- *Do not make changes to the `.js` files!* They will be overwritten at build time.
+- The typescript source is compiled to javascript which lives in `./build/scripts/`. Hubot is booted from the `./build` dir.
+- *Do not commit `.js` files!* They will be generated at docker container build time
 - This repo automagically gets built into a docker container [here](https://hub.docker.com/r/viosi/bbot)
 
 ### To run locally
@@ -36,11 +36,12 @@ npm start
 code ./ # open this puppy up
 ```
 
-and then from inside VSCode, do  `<cmd+shift+p> Run Task -> npm watch`
-(the linter should run automagically)
+```
+# from inside VSCode
+`<cmd+shift+p> Run Task -> npm watch`
+```
+the linter also will run automagically if installed
 
 ## Contributing
 
-Happy to merge PRs! Please remember to build `npm run build` and commit the updated `./scripts/*.js`.
-
-(Running this step will run the compile time checks which make typescript good)
+Happy to merge PRs!
