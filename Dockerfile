@@ -2,6 +2,7 @@ FROM node:8.9.1
 
 # hubot wants to use global coffee
 RUN npm install -g coffee-script
+RUN npm install -g typescript
 
 # install packages
 ADD package.json /opt
