@@ -1,9 +1,5 @@
 
-export function cryptoRegexBuilder(): RegExp {
-    const str = "^(" + Object.keys(table).join("|").replace(/\-/gi, "\\-") + ")$";
-    // console.log(str);
-    return new RegExp(str, "i");
-}
+
 
 export const table = {
     "bitcoin": "bitcoin",

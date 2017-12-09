@@ -15,13 +15,13 @@ Based on the typescript [hubot-example](https://github.com/AcklenAvenue/hubot-ex
 
 ```bash
 # install dependencies
-npm i
+npm install
 
 # build
 npm run lint
 npm run build
 
-# run a local 'chat' session with hubot!
+# run a local chat session with hubot!
 npm start
 ```
 
