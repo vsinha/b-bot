@@ -19,6 +19,6 @@
   "devDependencies": {
     "@types/hubot": "^2.19.0",
     "@types/request-promise": "^4.1.39",
-    "tslint": "^5.8.0",
+    "tslint": "^5.8.0"
   }
 }
