@@ -63,3 +63,4 @@ last   1hr ${d.percent_change_1h}%
 }
 
 export = new CryptoPrice().registerListener;
+
