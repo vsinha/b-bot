@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "start": "./node_modules/.bin/hubot",
-    "watch": "node ./node_modules/typescript/bin/tsc -p . -w",
-    "build": "node ./node_modules/typescript/bin/tsc -p .",
+    "watch": "node ./node_modules/.bin/tsc -p . -w",
+    "build": "node ./node_modules/.bin/tsc -p .",
     "lint": "node ./node_modules/tslint/bin/tslint --project ./tslint.json"
   },
   "dependencies": {

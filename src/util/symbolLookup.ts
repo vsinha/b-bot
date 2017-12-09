@@ -1,6 +1,3 @@
-
-
-
 export const table = {
     "bitcoin": "bitcoin",
     "btc": "bitcoin",
