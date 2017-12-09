@@ -13,12 +13,12 @@
     "hubot": "^2.11.4",
     "hubot-reload-scripts": "^0.1.4",
     "hubot-rocketchat": "^1.0.12",
-    "request-promise": "^0.4.0"
+    "request-promise": "^0.4.0",
+    "typescript": "^2.6.2"
   },
   "devDependencies": {
     "@types/hubot": "^2.19.0",
     "@types/request-promise": "^4.1.39",
     "tslint": "^5.8.0",
-    "typescript": "^2.6.2"
   }
 }

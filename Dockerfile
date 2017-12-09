@@ -6,7 +6,7 @@ RUN npm install -g coffee-script
 # install packages
 ADD package.json /opt
 WORKDIR /opt
-RUN npm install --production
+RUN npm install
 
 # add the codes
 ADD . /opt
