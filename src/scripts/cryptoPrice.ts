@@ -3,7 +3,7 @@ import { table as cryptoLookupTable } from "../util/symbolLookup";
 
 const baseUrl = "https://api.coinmarketcap.com/v1/ticker/";
 
-export function cryptoRegexBuilder(): RegExp {
+function cryptoRegexBuilder(): RegExp {
     const str = "^(" + Object.keys(cryptoLookupTable).join("|").replace(/\-/gi, "\\-") + ")";
     // console.log(str);
     return new RegExp(str, "i");
