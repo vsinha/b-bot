@@ -14,7 +14,8 @@ class Uptime {
 
         return robot.respond(/uptime/igm, (res: any) => {
 
-            const uptime = moment.duration(moment().diff(bootTime)).format(customTemplate, {
+            // typecast to use the .format lib declared above without a type warning... pretty janky.
+            const uptime = (moment.duration(moment().diff(bootTime)) as any).format(customTemplate, {
                 trim: false,
             });
 
